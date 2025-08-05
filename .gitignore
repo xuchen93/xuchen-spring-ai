@@ -36,3 +36,5 @@ build/
 */target/
 *.jar
 *.exe
+
+**/tools.yaml

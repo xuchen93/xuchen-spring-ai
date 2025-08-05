@@ -23,6 +23,7 @@
 
     <modules>
         <module>xuchen-spring-ai-app/xuchen-spring-ai-chat-zhipu</module>
+        <module>xuchen-spring-ai-app/xuchen-spring-ai-toolbox-zhipu</module>
         <module>xuchen-spring-ai-common</module>
         <module>xuchen-spring-ai-config</module>
         <module>xuchen-spring-ai-controller</module>

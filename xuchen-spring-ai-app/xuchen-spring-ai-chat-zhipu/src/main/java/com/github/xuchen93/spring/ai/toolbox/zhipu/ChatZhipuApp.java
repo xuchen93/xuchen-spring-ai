@@ -1,4 +1,4 @@
-package com.github.xuchen93.spring.ai.chat.zhipu;
+package com.github.xuchen93.spring.ai.toolbox.zhipu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

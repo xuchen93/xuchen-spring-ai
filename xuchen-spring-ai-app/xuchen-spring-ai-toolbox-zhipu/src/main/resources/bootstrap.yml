@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: xuchen-spring-ai-chat-zhipu
+  lifecycle:
+    timeout-per-shutdown-phase: 10m
+  ai:
+    model:
+      image: null
+    mcp:
+      client:
+        enable: true
+        name: ${spring.application.name}
+        type: ASYNC
+        stdio:
+          connections:
+            server-toolbox:
+              command: ${toolbox_dir}/toolbox
+              args:
+                - --stdio
+                - --tools-files
+                - ${toolbox_dir}/tools.yaml
+    zhipuai:
+      # https://bigmodel.cn/
+      api-key: ${zhipuai_apikey}
+      chat:
+        options:
+          # 这个是免费的
+          model: GLM-4.5-Flash
+          top-p: 0.1
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
+  pattern:
+    console: "%boldMagenta(%d{yyyy-MM-dd HH:mm:ss.SSS}) | %highlight(%-5level) | %boldYellow(%-18t) | %boldGreen(%50.50logger{49}):%boldGreen(%-4.4line) | %msg%n"
